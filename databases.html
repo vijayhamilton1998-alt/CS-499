@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databases | Vijay Hamilton</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1f2937;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 8px 0 0;
+        }
+
+        nav {
+            background-color: #374151;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #1f2937;
+        }
+
+        .artifact-section {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Vijay Hamilton</h1>
+    <p>Computer Science ePortfolio</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="code-review.html">Code Review</a>
+    <a href="software-engineering.html">Software Engineering</a>
+    <a href="algorithms.html">Algorithms &amp; Data Structures</a>
+    <a href="databases.html">Databases</a>
+</nav>
+
+<main>
+
+    <h2>Databases</h2>
+
+    <h3>Artifact: Travlr Getaways</h3>
+
+    <p>
+        The artifact selected for the Databases category is the Travlr Getaways
+        full-stack web application originally developed during CS 465 Full Stack
+        Development. The application uses MongoDB as its database and Mongoose
+        to define the data model and provide communication between the Node.js
+        application and the database.
+    </p>
+
+    <p>
+        I selected this artifact because persistent data is a central part of
+        the Travlr Getaways application. Travel packages must be stored,
+        retrieved, created, and modified while maintaining a consistent data
+        structure. The project therefore provided an appropriate foundation for
+        demonstrating database design, validation, CRUD operations, and
+        application-to-database communication.
+    </p>
+
+    <h3>Enhancement</h3>
+
+    <p>
+        The database enhancement focused on improving the reliability and
+        organization of the application's data layer. MongoDB provides the
+        persistent storage for trip information, while Mongoose provides a
+        structured schema that defines the information expected for each trip.
+        This creates a clearer contract between the application and its stored
+        data.
+    </p>
+
+    <p>
+        Trip records contain information such as a unique trip code, trip name,
+        length, start date, resort, price per person, image information, and a
+        description. Defining these fields through a Mongoose schema improves
+        consistency and makes it easier to validate information before it is
+        stored in the database.
+    </p>
+
+    <p>
+        The enhancement also emphasizes CRUD functionality. The application
+        needs to create new trip records, retrieve existing trips, update trip
+        information, and manage data through its API. Separating these operations
+        into appropriate models, controllers, and routes makes the application
+        easier to maintain and provides a clear path between an HTTP request and
+        the corresponding database operation.
+    </p>
+
+    <h3>Data Validation and Integrity</h3>
+
+    <p>
+        Validation is important because an application should not assume that
+        all incoming data is complete or correct. Applying validation at the
+        data-model and application levels helps prevent incomplete or malformed
+        records from being stored. It also provides more predictable behavior
+        when the front end communicates with the API.
+    </p>
+
+    <p>
+        The use of a unique trip code provides a reliable method of identifying
+        individual records. API operations can use this identifier to retrieve
+        or update a particular trip without relying on information that may not
+        be unique. This approach improves both data integrity and application
+        reliability.
+    </p>
+
+    <h3>Error Handling</h3>
+
+    <p>
+        Another important part of the enhancement is handling situations where
+        database operations do not produce the expected result. A requested trip
+        may not exist, required information may be missing, or a database
+        operation may fail. Appropriate error handling allows the API to return
+        meaningful responses instead of failing silently or exposing unnecessary
+        implementation details.
+    </p>
+
+    <p>
+        Considering these scenarios strengthened the reliability of the data
+        layer and reinforced the importance of designing database interactions
+        around both successful and unsuccessful outcomes.
+    </p>
+
+    <h3>Technical Skills Demonstrated</h3>
+
+    <p>
+        This enhancement demonstrates my ability to work with a NoSQL database,
+        design data models using Mongoose, implement CRUD functionality, validate
+        application data, and connect database operations with RESTful API
+        endpoints.
+    </p>
+
+    <p>
+        It also demonstrates my understanding of the relationship between the
+        database and other layers of a full-stack application. The database is
+        not an isolated component. Changes to the data model can affect API
+        controllers, services, Angular components, and the overall user
+        experience.
+    </p>
+
+    <h3>Course Outcomes</h3>
+
+    <p>
+        The database enhancement supports the CS 499 course outcomes by
+        demonstrating my ability to design and evaluate computing solutions that
+        use appropriate technologies and development practices. It also
+        demonstrates my ability to create solutions that manage information
+        reliably while considering maintainability, validation, security, and
+        the needs of application users.
+    </p>
+
+    <p>
+        The enhancement connects database development with software engineering
+        and algorithmic thinking. Effective applications require developers to
+        consider how information is stored, how efficiently it can be retrieved,
+        how it will be processed, and how other components will interact with
+        that information.
+    </p>
+
+    <h3>Reflection</h3>
+
+    <p>
+        Working on the database enhancement strengthened my understanding of how
+        important data design is to the overall quality of an application.
+        Earlier in my development experience, it was easy to think of a database
+        primarily as a location for storing records. Through this project and
+        other coursework, I developed a better understanding of how schemas,
+        validation, identifiers, CRUD operations, and error handling influence
+        the reliability of the entire system.
+    </p>
+
+    <p>
+        This enhancement also showed me the importance of planning the
+        relationship between an application's data layer and its other
+        components. A well-designed database interface makes future development
+        easier because other parts of the application can depend on predictable
+        data structures and responses. These are skills I will continue to use
+        when developing applications that rely on persistent data.
+    </p>
+
+    <div class="artifact-section">
+        <h3>Artifact Files</h3>
+
+        <p>
+            The original and enhanced Travlr Getaways project files will be
+            included in this ePortfolio to demonstrate the database improvements
+            completed during this enhancement.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    <p>CS 499 Computer Science Capstone | Southern New Hampshire University</p>
+</footer>
+
+</body>
+</html>
